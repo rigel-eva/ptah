@@ -18,5 +18,8 @@
   "bugs": {
     "url": "https://github.com/rigel-eva/ptah/issues"
   },
-  "homepage": "https://github.com/rigel-eva/ptah#readme"
+  "homepage": "https://github.com/rigel-eva/ptah#readme",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
 }
