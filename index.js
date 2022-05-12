@@ -7,7 +7,6 @@ const { CLIENT_TOKEN, FEEDBACK_CHANNEL_ID } = require('./keys.json');
 const neededIntents= new Intents();
 neededIntents.add(Intents.FLAGS.DIRECT_MESSAGES,Intents.FLAGS.GUILD_MESSAGES,Intents.FLAGS.GUILDS)
 const client = new Client({intents: neededIntents});
-const USER_ID = "974059309879136347"
 
 // When the client is ready, run this code (only once)
 client.once('ready', async () => {
