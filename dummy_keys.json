@@ -1,0 +1,7 @@
+{
+    "CLIENT_TOKEN": "Your Client OAuth Token",
+    "CLIENT_ID": "Your Client ID",
+    "CLIENT_SECRET": "Your Client Secret",
+    "GUILD_ID":  "What Discord Server do you want the bot on",
+    "FEEDBACK_CHANNEL_ID": "The Feedback channel in question"
+}
