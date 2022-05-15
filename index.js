@@ -1,6 +1,6 @@
 // Require the necessary discord.js classes
 const { Client, Intents } = require('discord.js');
-const { CLIENT_TOKEN, FEEDBACK_CHANNEL_ID } = require('./keys.json');
+const { CLIENT_TOKEN, FEEDBACK_CHANNEL_ID , ERROR_CHANNEL_ID} = require('./keys.json');
 
 
 // Create a new client instance
@@ -28,10 +28,17 @@ client.on('interactionCreate', async interaction => {
     //     await interaction.reply(`🏓Latency is ${Date.now() - interaction.createdTimestamp}ms. API Latency is ${Math.round(client.ws.ping)}ms`)
     // }
     if(interaction.commandName === 'dropbox'){
-        await interaction.user.send('🗳️ New anonymous message thread started! 🗳️');
+        try{
+
+            await interaction.user.send('🗳️ New anonymous message thread started! 🗳️');
+        }
+        
+        catch(e){
+            await client.channels.fetch(ERROR_CHANNEL_ID).send("User attempted to use Dropbox, but failed. Did they allow DMs?")
+        }
     }
     if(interaction.commandName === 'ptah-codebase'){
-        await interaction.user.send('https://github.com/rigel-eva/ptah')
+        await interaction.reply('https://github.com/rigel-eva/ptah')
     }
 });
 // Login to Discord with your client's token
