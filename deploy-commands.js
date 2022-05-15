@@ -6,7 +6,7 @@ const { Routes } = require('discord-api-types/v9');
 const commands = [
 	// new SlashCommandBuilder().setName('ping').setDescription('Replies with pong!'),
     new SlashCommandBuilder().setName('dropbox').setDescription('Sends a dm to let you send messages to the dropbox'),
-    new SlashCommandBuilder().setName('codebase').setDescription('Provides a link to the current codebase')
+    new SlashCommandBuilder().setName('ptah-codebase').setDescription('Provides a link to the current codebase')
 ]
 	.map(command => command.toJSON());
 

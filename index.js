@@ -30,7 +30,7 @@ client.on('interactionCreate', async interaction => {
     if(interaction.commandName === 'dropbox'){
         await interaction.user.send('🗳️ New anonymous message thread started! 🗳️');
     }
-    if(interaction.commandName === 'codebase'){
+    if(interaction.commandName === 'ptah-codebase'){
         await interaction.user.send('https://github.com/rigel-eva/ptah')
     }
 });
