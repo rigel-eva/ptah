@@ -34,7 +34,7 @@ client.on('interactionCreate', async interaction => {
         }
         
         catch(e){
-            await client.channels.fetch(ERROR_CHANNEL_ID).send("User attempted to use Dropbox, but failed. Did they allow DMs?")
+            (await client.channels.fetch(ERROR_CHANNEL_ID)).send("User attempted to use Dropbox, but failed. Did they allow DMs?")
         }
     }
     if(interaction.commandName === 'ptah-codebase'){
